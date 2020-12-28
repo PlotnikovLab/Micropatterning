@@ -1,0 +1,42 @@
+int i,j; //i and j are current rows and columns, respectively.
+int m = 3, n = 5; //m and n are number of field of view in y and x direction, respectively.
+double delta;
+
+SetVariableValue("delta", 532.48);
+
+for(i = 1; i <= m; i = i + 1)
+   {
+   if(i % 2 == 1)
+      {
+      for(j = 1; j <= n; j = j +1)
+         {
+         if(j < n)
+            {
+            RunMacro("C:\program files\nis-elements\macros\pattern_stimulation.mac"); 
+            StgMoveXY(delta, 0, 1);
+            }
+         else
+            {
+            RunMacro("C:\program files\nis-elements\macros\pattern_stimulation.mac"); 
+            StgMoveXY(0, delta, 1);
+            }
+         }
+      }
+   else
+      {
+      for(j = n; j >= 1; j = j -1)
+         {
+         if(j > 1)
+            {
+            RunMacro("C:\program files\nis-elements\macros\pattern_stimulation.mac"); 
+            StgMoveXY(-1*delta, 0, 1);
+            }
+         else
+            {
+            RunMacro("C:\program files\nis-elements\macros\pattern_stimulation.mac"); 
+            StgMoveXY(0, delta, 1);
+            }
+         }
+      }
+   }
+   
