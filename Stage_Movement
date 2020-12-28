@@ -1,8 +1,8 @@
-int i,j; //i and j are current rows and columns, respectively.
-int m = 3, n = 5; //m and n are number of field of view in y and x direction, respectively.
+int i,j; //i and j are current rows and columns, respectively
+int m = 3, n = 5; //m and n are number of field of view in y and x direction, respectively
 double delta;
 
-SetVariableValue("delta", 532.48);
+SetVariableValue("delta", 532.48); //the distance that the stage moves to obtain the next field of view
 
 for(i = 1; i <= m; i = i + 1)
    {
