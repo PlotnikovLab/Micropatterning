@@ -1,8 +1,20 @@
-int i,j; //i and j are current rows and columns, respectively
-int m = 3, n = 5; //m and n are number of field of view in y and x direction, respectively
+// input the following parameters before running the code
+
+int m = ?, n = ?;// the number of fields of view in y and x direction, respectively. 
+
+SetVariableValue("delta", ?);// the size of one FOV, so that the microscope will move by this distance after patterning each FOV.
+
+pattern_stimulation_path = "";// the path where the pattern_stimulation macro is stored, input between the quotation marks.
+
+// note to self: variable = __FILE__ + "pattern_stimulation" can this help with finding the file if the user stores the macro in the same folder as everything else
+
+// parameter section ends
+
+
+int i,j; // the current row and column, respectively. 
 double delta;
 
-SetVariableValue("delta", 532.48); //the distance that the stage moves to obtain the next field of view
+
 
 for(i = 1; i <= m; i = i + 1)
    {
@@ -12,12 +24,12 @@ for(i = 1; i <= m; i = i + 1)
          {
          if(j < n)
             {
-            RunMacro("C:\program files\nis-elements\macros\pattern_stimulation.mac"); 
+            RunMacro(pattern_stimulation_path); 
             StgMoveXY(delta, 0, 1);
             }
          else
             {
-            RunMacro("C:\program files\nis-elements\macros\pattern_stimulation.mac"); 
+            RunMacro(pattern_stimulation_path); 
             StgMoveXY(0, delta, 1);
             }
          }
@@ -28,15 +40,16 @@ for(i = 1; i <= m; i = i + 1)
          {
          if(j > 1)
             {
-            RunMacro("C:\program files\nis-elements\macros\pattern_stimulation.mac"); 
+            RunMacro(pattern_stimulation_path); 
             StgMoveXY(-1*delta, 0, 1);
             }
          else
             {
-            RunMacro("C:\program files\nis-elements\macros\pattern_stimulation.mac"); 
+            RunMacro(pattern_stimulation_path); 
             StgMoveXY(0, delta, 1);
             }
          }
       }
    }
+   
    
