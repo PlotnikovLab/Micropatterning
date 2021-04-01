@@ -1,4 +1,4 @@
-//Stage_Movement.mac is macro designed for NIS Elements (Nikon Instruments) and validated with the version 5.21.30 (Build 1489) of the software.
+//Stage_Movement.mac is a macro designed for NIS Elements (Nikon Instruments) and validated with the version 5.21.30 (Build 1489) of the software.
 //This macro generates an micropatterned array of a desired size on the PVA-coated coverslips by photoablating the coating with an IR laser.
 //To generate arrays that are larger than the microscope field of view, the macro moves the coverslip in a meander pattern. 
 
