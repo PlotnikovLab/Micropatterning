@@ -1,4 +1,5 @@
-//The following macro contains a protocol for photoablation of a micropattern on a multi-photon microscope powered by NIS Elements.
+//Pattern_Stimulation.mac is macro designed for NIS Elements (Nikon Instruments) and validated with the version 5.21.30 (Build 1489) of the software.
+//This macro contains a protocol of micropattern photoablation on a multi-photon microscope powered by NIS Elements.
 
 //Ablate a small fiduciary marker in the center of field of view
 SelectOptConf("Print_Fiduciary_Marker"); //burn a small square through many Z-planes
