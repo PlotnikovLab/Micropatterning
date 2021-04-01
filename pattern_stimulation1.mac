@@ -1,7 +1,14 @@
+//The following macro contains a protocol for photoablation of a micropattern on a multi-phootn micorscope powered by NIS Elements.
+
+//Ablate a small fiduciary marker in the center of field of view
 SelectOptConf("Print_Fiduciary_Marker"); //burn a small square through many Z-planes
 ND_RunZSeriesExp();
+
+// Focus the microscope on the PVA coated surface of the coverslip
 SelectOptConf("Autofocus"); //Use autofocus to find the best focal plane
 StgFocus();
+
+//Pattern the desired micropattern. File path for binary map of the pattern is stored in PatternMapPath variable.   
 SelectOptConf("Load_ROI"); //capture a 2048 image to load the ROI which is also 2048
 CloseAllDocuments(2);
 Capture();
@@ -16,5 +23,5 @@ ChangeROIType(12,3);
 ChangeROIType(13,3);
 ChangeROIType(14,3);
 A1ApplyStimulationSettings(); //Apply Stimulation settings in ND stimulation
-SelectOptConf("Micropattern"); //Pattern in the number of z planes defined in the ND stimulation settings
+SelectOptConf("Micropattern"); //Pattern in the number of Z planes defined in the ND stimulation settings
 ND_RunSequentialStimulationExp(); 
