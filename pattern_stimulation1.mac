@@ -1,10 +1,10 @@
-//The following macro contains a protocol for photoablation of a micropattern on a multi-phootn micorscope powered by NIS Elements.
+//The following macro contains a protocol for photoablation of a micropattern on a multi-photon microscope powered by NIS Elements.
 
 //Ablate a small fiduciary marker in the center of field of view
 SelectOptConf("Print_Fiduciary_Marker"); //burn a small square through many Z-planes
 ND_RunZSeriesExp();
 
-// Focus the microscope on the PVA coated surface of the coverslip
+//Focus the microscope on the PVA coated surface of the coverslip
 SelectOptConf("Autofocus"); //Use autofocus to find the best focal plane
 StgFocus();
 
