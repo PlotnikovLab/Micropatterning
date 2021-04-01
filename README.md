@@ -4,7 +4,7 @@ Methods to control cell shape are commonly employed to understand signaling mech
 
 ## Instructions
 
-This repository contains two types of files - NIS macros (.mac) and .py scripts. The macros enable automated micropatterning on an infrared laser-equipped multiphoton microscope powered by NIS-Elements. The .py scripts allow users to analyze immunofluorescent images acquired from cells plated on such micropatterns.
+This repository contains two types of files - NIS Elements macros (.mac) and .py scripts. The macros enable automated micropatterning on an infrared laser-equipped multiphoton microscope powered by NIS-Elements. The .py scripts allow users to analyze immunofluorescent images acquired from cells plated on such micropatterns.
 
 ### Macros
 
