@@ -6,7 +6,7 @@
 //The provided macro creates a micoropatterned array of 5x5 fields of views located next to each other.
 //These values (PatternLength, PatternHeight, StepSize) are hardcoded and should be adjusted if an array of different size is required.
 //Two other input parameters required for the macro are file path of a desired pattern ablation protocol and file path of a binary map of the pattern.
-//These parameters can be either hardcoded or provided through GUI (the default option). 
+//These parameters can be either hardcoded or provided through a GUI (the default option). 
 
 int PatternLength = 5; //Length of the patterned array counted in fields of view
 int PatternHeight = 5; //Height of the patterned array counted in fields of view
